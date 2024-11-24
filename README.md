@@ -1,31 +1,31 @@
-#h1 Home Elderly Activity and Safety Monitoring System
+# Home Elderly Activity and Safety Monitoring System
 
-Introduction
+## Introduction
 
 This project aims to monitor the activities of elderly individuals at home to ensure their safety and well-being. It primarily focuses on detecting dangerous events, such as falls, and notifying family members immediately via SMS or email alerts. Additionally, it tracks regular daily activities, such as eating, sleeping, sitting, and moving, to help caregivers better understand the elderly’s routines.
 
 By leveraging state-of-the-art computer vision algorithms, pre-trained models, and configurable modules, this system provides reliable real-time monitoring with minimal user intervention.
 
-Core Features
+## Core Features
 
 	1.	Danger Detection and Alerts:
-		Detects falls and other critical behaviors in real-time.
-		Sends SMS or email notifications to family members when a dangerous event occurs.
+		- Detects falls and other critical behaviors in real-time.
+		- Sends SMS or email notifications to family members when a dangerous event occurs.
 	2.	Daily Activity Monitoring:
-		Tracks activities like sitting, lying down, eating, running, and crawling.
-		Logs behaviors with timestamps for review and analysis.
+		- Tracks activities like sitting, lying down, eating, running, and crawling.
+		- Logs behaviors with timestamps for review and analysis.
 	3.	Real-Time Performance:
-		Uses advanced object detection and behavior classification algorithms.
-		Processes live video streams from home-installed cameras.
+		- Uses advanced object detection and behavior classification algorithms.
+		- Processes live video streams from home-installed cameras.
 	4.	Danger Zone Monitoring:
-		Configures specific zones (e.g., staircases or kitchens) to monitor entry and exit events.
+		- Configures specific zones (e.g., staircases or kitchens) to monitor entry and exit events.
 	5.	Behavior Reports:
-		Maintains a timeline of activities for each tracked individual.
-		Saves critical event snapshots for review.
+		- Maintains a timeline of activities for each tracked individual.
+		- Saves critical event snapshots for review.
 	6.	Environmental Adaptation:
-		Dynamically adjusts detection thresholds based on lighting and noise conditions.
+		- Dynamically adjusts detection thresholds based on lighting and noise conditions.
 
-Technologies Used
+## Technologies Used
 
 Datasets： Kinetics-400 / Custom Dataset
 
@@ -41,9 +41,6 @@ Project Configuration
 
 Configuration File: config/config.yaml
 
-The configuration file defines thresholds, paths, and danger zones:
-
-
 Setup Instructions
 
 Prerequisites
@@ -51,40 +48,9 @@ Prerequisites
 	•	Python 3.8+
 	•	A GPU with CUDA support (optional, for real-time performance)
 
-Installation
-
-	1.	Clone the repository:
-
-git clone https://github.com/your-repo/behavior-recognition-system.git
-cd behavior-recognition-system
-
-
-	2.	Install dependencies:
 
 pip install -r requirements.txt
 
-
-	3.	Download pre-trained models:
-	•	Place the YOLOv5 model (best.pt) in models/yolov5/.
-	•	Place the behavior classifier (behavior_classifier.pt) in models/behavior/.
-
-Usage
-
-Running the System
-
-	1.	Start the behavior recognition system:
-
-python main.py
-
-
-	2.	The system processes video frames from your webcam or configured RTSP stream.
-	3.	When a dangerous behavior (e.g., falling) is detected:
-	•	An SMS or email is sent to the configured recipients.
-	•	Snapshots of the event are saved in data/outputs/.
-
-Real-Time Monitoring
-
-	•	Visualizes bounding boxes, activity labels, and danger zone entries on video frames.
 
 Extending the System
 
