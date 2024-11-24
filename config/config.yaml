@@ -1,0 +1,40 @@
+video_stream:
+  rtsp_url: "rtsp://<camera_ip_address>:8554/unicast"
+
+yolov5:
+  model_path: "models/yolov5/yolov5s.pt"
+  confidence_threshold: 0.5
+
+osnet:
+  model_path: "models/reid/osnet_x1_0_imagenet.pt"
+  use_gpu: true
+
+behavior:
+  fall_threshold: 0.4
+  static_threshold: 5
+  speed_threshold: 2.0
+  danger_zones:
+    - [[100, 100], [500, 100], [500, 500], [100, 500]]  # Example polygon
+  model_path: "models/behavior/behavior_classifier.pth"
+  class_names: ["eating", "sitting", "lying", "walking", "running"]
+  dynamic_thresholds:
+    light: 0.5
+    dark: 0.6
+  tracking_duration: true
+
+notifications:
+  twilio:
+    account_sid: "your_account_sid"
+    auth_token: "your_auth_token"
+    from_number: "+1234567890"
+    to_number: "+0987654321"
+  email:
+    smtp_server: "smtp.gmail.com"
+    port: 587
+    username: "yao2137@gmail.com"
+    password: "your_password"
+    from_email: "your_email@gmail.com"
+    to_email: "recipient_email@gmail.com"
+  firebase:
+    server_key: "your_firebase_server_key"
+    topic: "your_topic"
