@@ -97,19 +97,19 @@ python main.py
 
 Adding New Behaviors
 
-	1.	Collect labeled data for the new behavior.
-	2.	Fine-tune the ResNet18 model using the labeled data.
-	3.	Update class_names in config.yaml to include the new behavior.
+1.	Collect labeled data for the new behavior. 
+2. Fine-tune the ResNet18 model using the labeled data.
+3.	Update class_names in config.yaml to include the new behavior.
 
 Adding New Danger Zones
 
-	1.	Define the new danger zone as a polygon.
-	2.	Update the danger_zones field in config.yaml.
+1.	Define the new danger zone as a polygon. 
+2. Update the danger_zones field in config.yaml.
 
 Customizing Notifications
 
-	1.	Edit the notification section in config.yaml to configure SMS and email alerts.
-	2.	Use the notification.py module to add new notification channels (e.g., push notifications).
+1.	Edit the notification section in config.yaml to configure SMS and email alerts. 
+2. Use the notification.py module to add new notification channels (e.g., push notifications).
 
 
 ## Real-World Scenario
